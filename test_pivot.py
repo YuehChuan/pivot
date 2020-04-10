@@ -38,13 +38,13 @@ class MyPivot(unittest.TestCase):
         plt.scatter(px, input_np[px], color="red")
         plt.show()
 
-    def test_load_1DViewer_list(self):
+    def load_1DViewer_list(self):
         from pivot.viewer_list import Viewer
         list=Viewer('medBlur.jpg')
 
         return list
 
-    def test_pivot_load_1DViewer(self, show=True):
+    def pivot_load_1DViewer(self, show=True):
         from pivot.load_data import load_1DViewer_list
         input_np=load_1DViewer_list('medBlur.jpg')
         diffential_input=diff_convol(input_np)
